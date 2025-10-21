@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class ConversorMetros {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingrese la longitud en metros: ");
+        double metros = sc.nextDouble();
+
+        double pies = metros * 3.28084;
+        int piesEnteros = (int) pies;
+        double pulgadasRestantes = (pies - piesEnteros) * 12;
+        int pulgadasEnteras = (int) Math.round(pulgadasRestantes);
+
+        System.out.println(metros + " metros son equivalentes a:");
+        System.out.println(piesEnteros + " pies y " + pulgadasEnteras + " pulgadas");
+    }
+}
