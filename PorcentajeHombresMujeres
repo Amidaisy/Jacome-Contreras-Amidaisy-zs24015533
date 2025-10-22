@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class PorcentajeHombresMujeres {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingrese el número de hombres: ");
+        int hombres = sc.nextInt();
+        System.out.print("Ingrese el número de mujeres: ");
+        int mujeres = sc.nextInt();
+
+        int totalEstudiantes = hombres + mujeres;
+        double porcentajeHombres = (hombres * 100.0) / totalEstudiantes;
+        double porcentajeMujeres = (mujeres * 100.0) / totalEstudiantes;
+
+        System.out.println("Porcentaje de hombres: " + String.format("2f", porcentajeHombres) + "%");
+        System.out.println("Porcentaje de mujeres: " + String.format("2f", porcentajeMujeres) + "%");
+    }
+}
