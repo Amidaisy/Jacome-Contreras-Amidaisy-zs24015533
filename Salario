@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class Salario {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingrese el salario anterior: ");
+        double salarioAnterior = sc.nextDouble();
+
+        double incremento = salarioAnterior * 0.25;
+        double nuevoSalario = salarioAnterior + incremento;
+
+        System.out.println("Salario anterior: $" + String.format("%.2f", salarioAnterior));
+        System.out.println("Incremento: " + (25) + "%");
+        System.out.println("Monto del incremento: $" + String.format("%.2f", incremento));
+        System.out.println("Nuevo salario: $" + String.format("%.2f", nuevoSalario));
+    }
+}
