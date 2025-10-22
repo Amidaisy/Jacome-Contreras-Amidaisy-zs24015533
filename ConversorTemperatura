@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class ConversorTemperatura {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingrese la temperatura en grados centígrados: ");
+        double temperaturaC = sc.nextDouble();
+
+        double temperaturaF = (temperaturaC * 9 / 5) + 32;
+        double temperaturaK = temperaturaC + 273.15;
+
+        System.out.println(temperaturaC + "°C es equivalente a:");
+        System.out.println(temperaturaF + "°F");
+        System.out.println(temperaturaK + " K");
+    }
+}
