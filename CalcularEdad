@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class CalcularEdad {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingrese su año de nacimiento: ");
+        int anioNacimiento = sc.nextInt();
+        System.out.print("Ingrese el año actual: ");
+        int anioActual = sc.nextInt();
+
+        int edad = anioActual - anioNacimiento;
+
+        System.out.println("Tu edad es: " + edad + " años");
+    }
+}
