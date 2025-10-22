@@ -1,0 +1,16 @@
+ import java.util.Scanner;
+
+public class Descuento {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingrese el total de la compra: ");
+        double totalCompra = sc.nextDouble();
+
+        double descuento = totalCompra * 0.15;
+        double totalPagar = totalCompra - descuento;
+
+        System.out.println("Total de la compra: $" + String.format("%.2f", totalCompra));
+        System.out.println("Descuento (15%): $" + String.format("%.2f", descuento));
+        System.out.println("Total a pagar: $" + String.format("%.2f", totalPagar));
+    }
+}
