@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class Interes {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingrese el capital a invertir: ");
+        double capital = sc.nextDouble();
+
+        double interesMensual = 0.02;
+        double interesGanado = capital * interesMensual;
+        double total = capital + interesGanado;
+
+        System.out.println("Capital invertido: $" + String.format("%.2f", capital));
+        System.out.println("Interés mensual: " + (interesMensual * 100) + "%");
+        System.out.println("Interés ganado: $" + String.format("%.2f", interesGanado));
+        System.out.println("Total después de un mes: $" + String.format("%.2f", total));
+    }
+}
