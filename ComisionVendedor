@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class ComisionVendedor{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double comisionTotal = 0;
+
+        for (int i = 1; i <= 4; i++) {
+            System.out.print("Ingrese el valor de la venta " + i + ": ");
+            double valorVenta = sc.nextDouble();
+
+            double comision = 0;
+            if (valorVenta <= 10000000) {
+                comision = valorVenta * 0.02;
+            } else if (valorVenta < 15000000) {
+                comision = valorVenta * 0.04;
+            } else {
+                comision = valorVenta * 0.10;
+            }
+
+            comisionTotal += comision;
+            System.out.println("Comisión por la venta " + i + ": $" + String.format("%.2f", comision));
+        }
+
+        System.out.println("Comisión total: $" + String.format("%.2f", comisionTotal));
+    }
+}
