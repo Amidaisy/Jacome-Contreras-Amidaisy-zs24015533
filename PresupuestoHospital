@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class PresupuestoHospital {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingrese el presupuesto anual del hospital: ");
+        double presupuesto = sc.nextDouble();
+
+        System.out.print("Ingrese el área (Ginecología, Pediatría, Traumatología): ");
+        String area = sc.next();
+
+        double porcentaje = 0;
+        if (area.equalsIgnoreCase("Ginecología")) {
+            porcentaje = 0.4;
+        } else if (area.equalsIgnoreCase("Pediatría")) {
+            porcentaje = 0.3;
+        } else if (area.equalsIgnoreCase("Traumatología")) {
+            porcentaje = 0.3;
+        } else {
+            System.out.println("Área inválida");
+            return;
+        }
+
+        double monto = presupuesto * porcentaje;
+        System.out.println("El monto que corresponde a " + area + " es: $" + String.format("%.2f", monto));
+    }
+}
