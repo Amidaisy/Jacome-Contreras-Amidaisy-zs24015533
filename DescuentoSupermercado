@@ -1,0 +1,25 @@
+import java.util.Random;
+import java.util.Scanner;
+
+public class DescuentoSupermercado {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingrese el total de la compra: ");
+        double totalCompra = sc.nextDouble();
+
+        Random random = new Random();
+        int numeroAleatorio = random.nextInt(100) + 1; // número aleatorio entre 1 y 100
+        System.out.println("El número aleatorio es: " + numeroAleatorio);
+
+        double descuento = 0;
+        if (numeroAleatorio < 74) {
+            descuento = totalCompra * 0.15;
+        } else {
+            descuento = totalCompra * 0.20;
+        }
+
+        double totalPagar = totalCompra - descuento;
+        System.out.println("Descuento: $" + String.format("%.2f", descuento));
+        System.out.println("Total a pagar: $" + String.format("%.2f", totalPagar));
+    }
+}
