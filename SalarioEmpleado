@@ -1,0 +1,47 @@
+import java.util.Scanner;
+
+public class SalarioEmpleado {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingrese la categoría del empleado (1, 2, 3 o 4): ");
+        int categoria = sc.nextInt();
+        System.out.print("Ingrese el número de horas trabajadas en el mes: ");
+        double horasTrabajadas = sc.nextDouble();
+
+        double salarioHora = 0;
+        switch (categoria) {
+            case 1:
+                salarioHora = 20000;
+                break;
+            case 2:
+                salarioHora = 15000;
+                break;
+            case 3:
+                salarioHora = 10000;
+                break;
+            case 4:
+                salarioHora = 7500;
+                break;
+            default:
+                System.out.println("Categoría inválida");
+                return;
+        }
+
+        double salarioMensual = salarioHora * horasTrabajadas;
+        double descuentoSalud = salarioMensual * 0.072;
+        double salarioDespuesDescuento = salarioMensual - descuentoSalud;
+
+        double subsidio = 0;
+        if (salarioMensual < 1000000) {
+            subsidio = salarioMensual * 0.15;
+            salarioDespuesDescuento += subsidio;
+        }
+
+        System.out.println("Salario mensual: $" + String.format("%.2f", salarioMensual));
+        System.out.println("Descuento por salud: $" + String.format("%.2f", descuentoSalud));
+        if (subsidio > 0) {
+            System.out.println("Subsidio: $" + String.format("%.2f", subsidio));
+        }
+        System.out.println("Salario a pagar: $" + String.format("%.2f", salarioDespuesDescuento));
+    }
+}
